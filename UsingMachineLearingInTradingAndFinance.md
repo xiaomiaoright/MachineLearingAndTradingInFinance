@@ -93,3 +93,15 @@ model.evaluate(x_test, y_test)
 4. Once trained, model can be used for prediction
 
 predictions = model.predict(input_samples, steps = 1)
+
+5. Save Model
+```python
+OUTPUT_DIR = "./export/savemodel"
+shuil.rmtree(OUTPUT_DIR, ignore_errors = Ture)
+
+EXPORT_PATH = os.path.join(OUTPUT_DIR, datetime.datetime.now().strftime("%Y%m%d%H%M%S"))
+
+tf.saved_model.save(model, EXPORT_PATH)
+```
+
+push model to AI platformls
