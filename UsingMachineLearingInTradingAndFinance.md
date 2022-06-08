@@ -105,3 +105,55 @@ tf.saved_model.save(model, EXPORT_PATH)
 ```
 
 push model to AI platformls
+
+
+# Keras Functional API
+
+Wide and deep NNs
+
+Jointly training a wide linear model for memorization and alongside a DNN for generalization
+
+## Creating a Wide and Deep Model in Keras
+1. Prepare input feature columns
+```python
+inputs = {colname : layers.Input(name = colname, shape = (), dtype = 'float32') for colname in INPUT_COLS}
+```
+
+2. Create Deep columns
+
+
+3. Create the deep parts of model
+
+
+4. Create wide columns
+
+5. Combine outputs
+
+6. finalize model
+
+## Strength and weakness of Functional API
+1. Strength
+* less verbose than using Keras. Model subclasses
+* validates your model while defining it
+* model is plottable and inspectable
+* model can be serialized and cloned
+
+
+# Regularization
+## Basics
+Loss curve of training and testing dataset vs. Training iterations
+
+reduce model complexity
+
+
+Minimize: Loss ( data/model) + complexity(model)
+
+
+# Regularization
+
+* Early Stopping
+*  Parameter Norm Penalties (L1 & L2, Max-norm regularization)
+* Dropout layers : dropout randomly dropping out unit activations in a network for a signle gradient step -> Ensemble model
+* Dataset augmentation
+* Noise Robustness
+* Sparse Representations
