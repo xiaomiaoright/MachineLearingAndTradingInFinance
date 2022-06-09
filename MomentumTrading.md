@@ -38,3 +38,25 @@ Score ~ 1 then buy; score ~ -1 then sell;
 1. Recognize momentum in a time series of asset prices
 2. Understand how momentum is related to serial autocorrelation
 3. Use the Hurst exponent to measure long-term memory of asset prices
+
+
+## long-term autocorrelation of returns
+* p(k) = CK^(-a)
+* p(k) is an autocorreltation function
+* C is a constant
+* k is the number  of lags
+* a is the decay parameter
+
+## Long Memory Process (LMP)
+LMP is a process with a random component, where a pas event has a decaying effect on future events
+* LMP follows power law
+* a ranges between 0 and 2
+* 0<a<1, indicates persistencce
+* a = 1, indicates random walk
+* 1<a<2, indicates mean reversion
+* Hurst Exponent: H = 1 - a/2 
+
+    * Hurst = 0.5, random walk
+    * Hurst > 0.5, Momentum
+    * Hurst < 0.5, mean reversion
+
