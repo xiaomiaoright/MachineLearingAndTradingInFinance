@@ -60,3 +60,117 @@ LMP is a process with a random component, where a pas event has a decaying effec
     * Hurst > 0.5, Momentum
     * Hurst < 0.5, mean reversion
 
+# Building a Momentum Trading Model
+Using python andd open source library called backtester from Auquan
+## Elements of trading system
+* Trading System: market, logic, parameters by which trading logic triggered
+* Backtesting system: analyze strategy's performance on historical data and remove biases
+* Excution system
+*Risk management system
+
+
+Open source toolbox Auquan
+
+* Open source library
+* Simulates an exchange
+* Backtests your algorithm
+* Executes your trades
+* Calculates your P/L
+* Allows you to back test if any time frame you want
+
+## Developing a Trading Strategy using ML
+1. Create Features from data
+    * Fundamental: P/E Ratios, EPS, Cash Flows, etc.
+    * Technical based on how your chosen securities behave:
+        * Momentum features, Mean reversion
+        * Correlated or cointergrated features
+    * Combined fundamental and technical indicators
+2. Develop a trading startegy using these features
+    * Which instruments are a buy, a sell, or neutural
+    * When to buy/sell and 
+    * How much to buy/sell
+
+## BUilding a momentum trading model using ML
+Steps:
+
+1. Define the problem
+    * Price prediction
+    * Return/P&L
+    * Buy/Sell signal
+    * Portfolio Optimization
+    * Efficient Excution
+
+    ### How to implement Momentum Trading Strategy using ML
+
+    Problem: Create a prediction model that can help trade price difference between two assets
+
+        Basis = Price of Stock - Price of Future
+
+        Basist = St - Ft
+
+    Target: Expected Value in the next 5 minutes
+
+        Y = feature expected value of basis = Average(basis(t1),basis(t2),basis(t3),basis(t4),basis(t5))
+
+    Objective: Create a model so that the prediccted value is as close as possible to Y
+
+    Evaluation Criteria: RMSE, P/L
+
+    Features (X)
+
+        Stock bid price
+        Future Bid price
+        Stock VWAP
+        Futures VWAP
+
+    stockVWAP = (BidPrice *AskVolume + AskPrice*BidVolume) / (AskVolume+BidVolume)
+
+    Data is already cleaned for Dividends, splits, rolls
+
+2. Collect data
+
+* Stock price data, trade volume data
+* Fundamental data, overall market indicator (ex. indexes)
+* Correlated stocks data
+* Similar assets price information
+
+Remember to check for accuracy, alignment
+
+Remberm to clean for dividends stock splits, roll, etc.
+
+* Alternative Data is Untapped Data
+    * Credit card transactions
+    Email receipts
+    Point of sale transactions
+    Web site usage
+    Obscure city hall records
+    Satellite images
+
+3. Creating Features: Feature Engineering
+
+* Feature Selection
+    * Don't randomsly choose a very large set of features without exploring reltionship with target variable
+    * Little to no relationship with target will lead to overfitting
+    * Rank candidate features according to Maximal Information Coefficient (MIC) or PCA and other methods
+
+* Feature Transform/Normalize
+    * Scaling
+    * Centering
+    * Normalization
+    * Regular Normalizating
+    * Caveat
+
+4. Split data
+
+Create training and test set for the model -> Cross validation
+
+
+
+5. Select a ML algorithm
+6. Backtest on Unseen data
+
+
+
+
+
+
