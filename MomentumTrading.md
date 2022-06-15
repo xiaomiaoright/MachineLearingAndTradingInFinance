@@ -164,12 +164,40 @@ Remberm to clean for dividends stock splits, roll, etc.
 
 Create training and test set for the model -> Cross validation
 
+Market Regime Shifts: Tendency of financial markets often change their behavior abruptly.
 
+    What is the training set in one regime but the validation set is another regime.
+
+    Multiple models for different regime, then assemble them;
+    Or use a classifer to detect what regime you are in, then apply a particular model that is trained for that regime.
 
 5. Select a ML algorithm
+
+Linear model tend to have high bias and low variance
+* Good for noisy data with variables that are independent(not highly correlated)
+* Reduce the highly corelated variables will improve linear model performance
+* SVR model works well even there are a lot of variables in compared to linear model
+* Gradient Boosting Regression works well as well with a lot of random variables
+
+Ensemble Learning
+* Train different models on the same traning dataset
+* Combine predictions of the each model and average to preduce predictions
+* Winsdom of crowd
+
+
+
 6. Backtest on Unseen data
 
+Identify the model that is over trained on the training data
 
+## Simple ML Strategies to Generate Trading Signal
+### Trade Stock using Momentum Factors
+1. Understand the problem
+
+Use the trading data for a fictious company to predict "basis" for the stock. Using its current and predicted basis, we will decide to buy or sell its stock at each point in time using purely momentum factors such as:
+* 2-min exponential moving avg of the basis
+* 5-min exponential moving avg of the basis
+* 10-min exponential moving avg of the basis
 
 
 
