@@ -90,3 +90,19 @@ Key performance metrics
 
 # Backtesting and Avoid Overfitting
 
+1. Kalman filter Introduction
+* Optimal Estimation Algorith
+* Not considered a ML technique
+* Supports estimation of past present and future states
+* Even when the precise nature of the model system is unknown
+
+2. WHen Kalman filter used?
+* The variables of interest can be measured only indirectly
+* or measurements are available from multiple sources subject to noise
+
+
+    Time Update
+
+    Measurement Update
+
+3. Kalman Filter Trading Applications
